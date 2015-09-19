@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "Redux counter modoki",
   "scripts": {
-    "start": "budo index.js:static/bundle.js -v -d | garnish"
+    "start": "budo index.js:static/bundle.js -v -d | garnish",
+    "build": "mkdir -p static; browserify -e index.js -o static/bundle.js"
   },
   "browserify": {
     "transform": [
