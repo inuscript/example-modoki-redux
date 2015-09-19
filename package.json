@@ -1,21 +1,16 @@
 {
-  "name": "redux-counter-example",
+  "name": "example-redux-counter-modoki",
   "version": "0.0.0",
-  "description": "Redux counter example",
+  "description": "Redux counter modoki",
   "scripts": {
-    "start": "node server.js",
-    "test": "mocha --recursive --compilers js:babel-core/register",
-    "test:watch": "npm test -- --watch"
+    "start": "budo index.js:static/bundle.js -v -d | garnish"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rackt/redux.git"
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rackt/redux/issues"
-  },
-  "homepage": "http://rackt.github.io/redux",
   "dependencies": {
     "react": "^0.13.3",
     "react-redux": "^2.1.2",
@@ -26,11 +21,13 @@
     "babel-core": "^5.6.18",
     "babel-loader": "^5.1.4",
     "babel-plugin-react-transform": "^1.0.3",
+    "babelify": "^6.3.0",
     "expect": "^1.6.0",
     "jsdom": "^5.6.1",
     "mocha": "^2.2.5",
     "mocha-jsdom": "^1.0.0",
     "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
     "react-transform-webpack-hmr": "^0.1.4",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0"
